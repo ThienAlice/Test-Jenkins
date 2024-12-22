@@ -8,6 +8,8 @@ pipeline {
             }
             steps {
                 script {
+                    sh 'git fetch origin main'
+                    sh 'git branch -r'
                     sh 'git diff --name-only main test --'
                 }
             }
