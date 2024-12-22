@@ -3,7 +3,7 @@ pipeline {
     agent any
     stages {
         stage ('Information'){
-            step{
+            steps{
                 script{
                     echo "${env.BRANCH_NAME}"
                 }
