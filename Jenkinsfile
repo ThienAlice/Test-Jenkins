@@ -8,7 +8,7 @@ pipeline {
             }
             steps {
                 script {
-                    def change = myLibrary.detectChange("${env.BRANCH_NAME}", "main")
+                    def change = myLibrary.detectChange("${env.BRANCH_NAME}", "test")
                     if (change == "") {
                         echo "No changes detected. Exiting..."
                     }
