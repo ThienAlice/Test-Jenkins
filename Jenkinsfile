@@ -3,7 +3,13 @@ pipeline {
     agent any
     stages {
         stage ('Information'){
-            echo "${env.BRANCH_NAME}"
+            step{
+                script{
+                    echo "${env.BRANCH_NAME}"
+                }
+                 
+            }
+           
         }
         stage ('Detect Change') {
             when {
