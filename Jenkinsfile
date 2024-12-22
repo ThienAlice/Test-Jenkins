@@ -8,10 +8,7 @@ pipeline {
             }
             steps {
                 script {
-                    sh 'git fetch origin main'
-                    sh 'git fetch origin test'
-                    sh 'git branch -r'
-                    sh 'git diff --name-only origin/main origin/test --'
+                    echo "${env.BRANCH_NAME}"
                 }
             }
         }
