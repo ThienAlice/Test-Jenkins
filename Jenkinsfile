@@ -8,13 +8,7 @@ pipeline {
             }
             steps {
                 script {
-                    def change = myLibrary.detectChange("${env.BRANCH_NAME}", "test")
-                    if (change == "") {
-                        echo "No changes detected. Exiting..."
-                    }
-                    else {
-                        echo "Changes detected: ${change}"
-                    }
+                    sh 'git diff --name-only main test'
                 }
             }
         }
