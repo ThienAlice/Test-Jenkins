@@ -8,7 +8,7 @@ pipeline {
             }
             steps {
                 script {
-                    sh 'git diff --name-only main test'
+                    sh 'git diff --name-only main test --'
                 }
             }
         }
