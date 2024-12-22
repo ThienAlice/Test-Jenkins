@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('for pull request') {
             when {
-                changRequest()
+                changeRequest()
             }
             steps {
                 script {
