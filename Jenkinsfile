@@ -18,7 +18,7 @@ pipeline {
             }
             steps {
                 script {
-                    sh """git diff --name-only HEAD~1 HEAD | awk -F/ "{print $1}" | sort | uniq"""
+                    sh """git diff --name-only HEAD~1 HEAD | awk -F/ '{print \$1}' | sort | uniq"""
                 }
             }
         }
